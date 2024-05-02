@@ -1,8 +1,8 @@
 <template>
   <nav id="navbar" class="relative z-10 w-full text-neutral-800">
     <div class="flex flex-col max-w-screen-xl px-8 mx-auto lg:items-center lg:justify-between lg:flex-row py-4">
-      <div class="flex flex-col lg:flex-row items-center space-x-4 xl:space-x-8">
-        <div class="w-full flex flex-row items-center justify-between py-6">
+      <div class="w-full flex flex-col lg:flex-row items-center space-x-4 xl:space-x-8">
+        <div class="flex flex-row items-center justify-between py-6">
           <div>
             <img :src="require('~/assets/img/logo/nefa.svg')" class="w-24 xl:w-28" alt="Nefa Logo" />
           </div>
@@ -11,22 +11,20 @@
             <CloseIcon v-else :size="24" />
           </button>
         </div>
-        <ul
-          :class="[open ? 'flex' : 'hidden lg:flex']"
-          class="w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0"
-        >
-          <NavLink name="Cryptocurrency" url="#" />
-          <NavLink name="Exchanges" url="#" />
-          <NavLink name="Watchlist" url="#" />
-          <NavLink name="NFT" url="#" />
-          <NavLink name="Portfolio" url="#" />
-          <li class="relative group">
+        <ul :class="[open ? 'flex' : 'hidden lg:flex']"
+            class="w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0"
+            >
+            <NavLink name="차명도" url="#" />
+            <NavLink name="시발" url="#" />
+            <NavLink name="섹스" url="#" />
+            <NavLink name="예아" url="#" />
+            <NavLink name="윤성우" url="#" />
             <button
-              class="md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline flex items-center"
+              class="w-full md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline flex items-center"
               @click="dropdownToggler"
               @blur="dropdownToggler"
             >
-              <span>Products</span>
+              <span>더보기</span>
               <ChevronUpIcon v-if="dropdownNavbar" :size="16" />
               <ChevronDownIcon v-else :size="16" />
             </button>
@@ -49,7 +47,6 @@
                 </li>
               </ul>
             </transition>
-          </li>
         </ul>
       </div>
       <div :class="[open ? 'flex' : 'hidden lg:flex']" class="space-x-3">
@@ -66,10 +63,10 @@
 <script>
 export default {
   name: 'BaseNavbar',
-  data() {
+  data () {
     return {
       open: false,
-      dropdownNavbar: false,
+      dropdownNavbar: false
     }
   },
   methods: {
