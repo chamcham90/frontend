@@ -17,15 +17,15 @@
             <thead>
               <tr>
                 <th class="text-left text-sm font-medium text-gray-500">Name</th>
-                <th class="text-left text-sm font-medium text-gray-500">Price</th>
-                <th class="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>
+                <th class="text-left text-sm font-medium text-gray-500">Days</th>
+<!--                <th class="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>-->
               </tr>
             </thead>
             <tbody>
               <tr v-for="data in datasets" :key="data.id" class="border-b border-gray-200">
                 <td class="py-4 whitespace-nowrap">
                   <div class="flex items-center space-x-2">
-                    <img :src="require(`~/assets/img/crypto-icon/${data.logo}`)" alt="" />
+                    <img :src="require(`~/assets/img/lang-icon/${data.logo}`)" alt="" />
                     <span>{{ data.name }}</span>
                   </div>
                 </td>
@@ -33,14 +33,14 @@
                   <div class="flex items-center">
                     <PlusThickIcon v-if="data.increase" :size="14" class="text-emerald-500" />
                     <MinusThickIcon v-else :size="14" class="text-red-500" />
-                    <span>${{ data.price }}</span>
+                    <span>{{ data?.udt }}</span>
                   </div>
                 </td>
-                <td class="hidden sm:block whitespace-nowrap">
-                  <div>
-                    <LineChart class="w-28 h-12 -mx-2" :datasets="data.data" :increase="data.increase" />
-                  </div>
-                </td>
+<!--                <td class="hidden sm:block whitespace-nowrap">-->
+<!--                  <div>-->
+<!--                    <LineChart class="w-28 h-12 -mx-2" :datasets="data.data" :increase="data.increase" />-->
+<!--                  </div>-->
+<!--                </td>-->
               </tr>
             </tbody>
           </table>
@@ -55,12 +55,12 @@ export default {
   props: {
     title: {
       type: String,
-      default: '',
+      default: ''
     },
     datasets: {
       type: Array,
-      default: () => [],
-    },
-  },
+      default: () => []
+    }
+  }
 }
 </script>

@@ -10,10 +10,10 @@
             data-aos-once="true"
             class="text-[2.5rem] sm:text-5xl xl:text-6xl font-bold leading-tight capitalize sm:pr-8 xl:pr-10"
           >
-            The World's <span class="text-header-gradient">Fastest Growing</span> Crypto Web App
+            Coding with Joy <span class="text-header-gradient">Enjoy development</span> Web App
           </h1>
           <p data-aos="fade-down" data-aos-once="true" data-aos-delay="300" class="paragraph hidden sm:block">
-            Buy and sell 200+ cryptocurrencies with 20+ flat currencies using bank transfers or your credit/debit card.
+            다양한 개발 작업을 즐기는 개발자를 지금 만나보세요
           </p>
           <div
             data-aos="fade-up"
@@ -39,7 +39,7 @@
             <img
               data-aos="fade-up"
               data-aos-once="true"
-              :src="require('~/assets/img/hero-image.webp')"
+              :src="require('~/assets/img/hero-image.png')"
               class="-mt-4"
               alt=""
             />
@@ -79,21 +79,21 @@
       <div class="w-full flex flex-col lg:flex-row items-center justify-center">
         <LandingCryptoStatistic
           data-aos="fade-up"
-          title="🔥 Trending"
+          title="🔥 최근관심사"
           :datasets="trendings"
           class="xl:border-r border-gray-200 lg:px-8"
         />
         <LandingCryptoStatistic
           data-aos="fade-up"
           data-aos-delay="150"
-          title="🚀 Top Gainers"
+          title="🚀 툴"
           :datasets="topGainers"
           class="xl:border-r border-gray-200 lg:px-8"
         />
         <LandingCryptoStatistic
           data-aos="fade-up"
           data-aos-delay="300"
-          title="💎 Recently Added"
+          title="🛠 기타"
           :datasets="recents"
           class="lg:px-8"
         />
@@ -106,30 +106,30 @@
         <LandingBuyTradeImage class="sm:hidden mb-8" />
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
           <h2 class="text-4xl font-semibold sm:pr-8 xl:pr-12">
-            Buy & trade on the <br class="hidden sm:block" />
-            original crypto exchange.
+            연락처를 남겨주시면 <br class="hidden sm:block" />
+            곧 연락드리겠습니다!
           </h2>
           <p class="paragraph">
-            Buy now and get 40% extra bonus Minimum pre-sale amount 25 Crypto Coin. We accept BTC crypto-currency
+            연락처를 남겨주시면 24시간 이내로 연락드리겠습니다!
           </p>
           <div class="space-y-6 lg:pr-12">
             <LandingExchange
-              title="Amount"
+              title="이름"
               name="amount"
-              type="number"
-              default-value="5.000"
+              type="text"
+              default-value=""
               :exchange-selected="currencySelected"
               :exchanges="currencies"
             />
             <LandingExchange
-              title="Get"
+              title="연락처"
               name="get"
               type="number"
-              default-value="0.10901"
+              default-value=""
               :exchange-selected="cryptoSelected"
               :exchanges="cryptocurrencies"
             />
-            <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">Buy Now</BaseButton>
+            <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">연락처 남기기</BaseButton>
           </div>
         </div>
         <LandingBuyTradeImage data-aos="fade-left" class="hidden sm:block" />
@@ -139,11 +139,11 @@
     <!-- Partners section -->
     <section class="bg-partner relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
-        <h3 data-aos="flip-down" class="text-2xl text-neutral-800 font-semibold">Trusted Partners Worldwide</h3>
+        <h3 data-aos="flip-down" class="text-2xl text-neutral-800 font-semibold">Trusted Partners</h3>
         <p data-aos="flip-down" class="paragraph">We're partners with countless major organisations around the globe</p>
         <div data-aos="fade-up" class="flex flex-wrap items-center justify-center">
           <LandingPartnerImage
-            v-for="img in ['clever.png', 'diamon-cutts.png', 'swiss-finance.png', 'gambio.png']"
+            v-for="img in ['jquery240.png', 'vue240.png', 'flutter240.png', 'spring-boot240.png', 'vconnect240.png', 'wowlogis240.png']"
             :key="img"
             :img="img"
           />
@@ -344,33 +344,37 @@ export default {
       trendings: [
         {
           id: 1,
-          name: 'Bitcoin',
+          name: 'vue',
+          udt: '2024-05',
           price: 43180.13,
-          logo: 'bitcoin.png',
+          logo: 'vue.png',
           increase: true,
           data: [40, 35, 60, 75, 60, 75, 50]
         },
         {
           id: 2,
-          name: 'Ethereum',
+          name: 'flutter',
+          udt: '2024-01',
           price: 3480.65,
-          logo: 'ethereum.png',
+          logo: 'flutter.png',
           increase: false,
           data: [25, 30, 60, 50, 80, 55, 80]
         },
         {
           id: 3,
-          name: 'Solana',
+          name: 'spring',
           price: 150.2,
-          logo: 'solana.png',
+          udt: '2024-01',
+          logo: 'spring.png',
           increase: true,
           data: [40, 45, 40, 80, 50, 60, 35]
         },
         {
           id: 4,
-          name: 'Dogecoin',
+          name: 'java',
           price: 0.1572,
-          logo: 'dogecoin.png',
+          udt: '2024-01',
+          logo: 'java.png',
           increase: true,
           data: [35, 70, 60, 80, 50, 60, 40]
         }
@@ -378,33 +382,33 @@ export default {
       topGainers: [
         {
           id: 1,
-          name: 'PAPPAY',
+          name: 'intellij',
           price: 0.00374,
-          logo: 'pappay.png',
+          logo: 'intellij.png',
           increase: true,
           data: [30, 50, 45, 60, 70, 40, 45]
         },
         {
           id: 2,
-          name: 'Bitcoin Asia',
+          name: 'POSTMAN',
           price: 0.02096,
-          logo: 'bitcoin-asia.png',
+          logo: 'postman.png',
           increase: true,
           data: [25, 60, 50, 60, 35, 50, 70]
         },
         {
           id: 3,
-          name: 'MoonRock',
+          name: 'FIGMA',
           price: 0.004907,
-          logo: 'moonrock.png',
+          logo: 'figma.png',
           increase: true,
           data: [40, 35, 40, 25, 50, 70, 45]
         },
         {
           id: 4,
-          name: 'NinjaFloki',
+          name: 'DBEAVER',
           price: 0.000123,
-          logo: 'ninjafloki.png',
+          logo: 'dbeaver.png',
           increase: true,
           data: [45, 35, 40, 30, 25, 45, 35]
         }
@@ -412,33 +416,33 @@ export default {
       recents: [
         {
           id: 1,
-          name: 'MetaCraft',
+          name: 'grafana',
           price: 0.0608,
-          logo: 'metacraft.png',
+          logo: 'grafana.png',
           increase: false,
           data: [40, 50, 45, 60, 35, 40, 45]
         },
         {
           id: 2,
-          name: 'Frog',
+          name: 'loki',
           price: 0.5875,
-          logo: 'frog.png',
+          logo: 'loki.png',
           increase: false,
           data: [25, 50, 45, 48, 40, 60, 45]
         },
         {
           id: 3,
-          name: 'Musk Doge',
+          name: 'prometheus',
           price: 0.04041,
-          logo: 'musk-doge.png',
+          logo: 'prometheus.png',
           increase: true,
           data: [25, 35, 60, 45, 50, 45, 45]
         },
         {
           id: 4,
-          name: '2SHARE',
+          name: 'docker',
           price: 1366.24,
-          logo: '2share.png',
+          logo: 'docker.png',
           increase: true,
           data: [35, 30, 60, 50, 35, 45, 40]
         }
