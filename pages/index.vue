@@ -139,11 +139,11 @@
     <!-- Partners section -->
     <section class="bg-partner relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
-        <h3 data-aos="flip-down" class="text-2xl text-neutral-800 font-semibold">Trusted Partners</h3>
-        <p data-aos="flip-down" class="paragraph">We're partners with countless major organisations around the globe</p>
+        <h3 data-aos="flip-down" class="text-2xl text-neutral-800 font-semibold">사용가능</h3>
+        <p data-aos="flip-down" class="paragraph">프로젝트에 적용해보세요</p>
         <div data-aos="fade-up" class="flex flex-wrap items-center justify-center">
           <LandingPartnerImage
-            v-for="img in ['jquery240.png', 'vue240.png', 'flutter240.png', 'spring-boot240.png', 'vconnect240.png', 'wowlogis240.png']"
+            v-for="img in ['jquery240.png', 'vue240.png', 'flutter240.png', 'spring-boot240.png', 'git240.png', 'javascript240.png']"
             :key="img"
             :img="img"
           />
@@ -156,23 +156,24 @@
       <BaseSection data-aos="fade-down">
         <div class="col-span-12 lg:col-span-7">
           <div class="w-full">
-            <img :src="require('~/assets/img/nefa-cc.webp')" class="w-[95%]" alt="" />
+            <img :src="require('~/assets/img/app-icons.png')" class="w-[95%]" alt="" />
           </div>
         </div>
         <div class="col-span-12 lg:col-span-5 space-y-6 px-4 sm:px-6 mt-20">
           <h2 class="text-4xl font-semibold">
-            Introducing the <span class="text-header-gradient">NEFA</span> Credit Card
+            다양한
+            <span class="text-header-gradient">사용자 경험</span>
           </h2>
-          <p class="paragraph">Subject to cardholder and rewards terms which will be available at application.</p>
+          <p class="paragraph">프로젝트 및 다양한 프로그램 사용 노하우를 적용해보세요</p>
           <ul class="space-y-4 sm:space-y-2">
-            <LandingListItem title="Up to 3% back on purchases" />
-            <LandingListItem title="Earn rewards in bitcoin or any crypto on NEFA" />
-            <LandingListItem title="No annual fee" />
+            <LandingListItem title="다양한 개발을 하면서 겪은 노하우와 경험을 제공합니다." />
+            <LandingListItem title="머물러 있는 개발이 아닌 도전적이 개발 추구" />
+            <LandingListItem title="안정적인 서비스를 위한 개발" />
           </ul>
-          <BaseButton
-            class="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base"
-          >Join the waitlist</BaseButton
-          >
+<!--          <BaseButton-->
+<!--            class="w-full sm:max-w-[240px] px-10 py-4 bg-inherit text-gradient border border-[#0c66ee] text-base"-->
+<!--          >Join the waitlist</BaseButton-->
+<!--          >-->
         </div>
       </BaseSection>
     </section>
@@ -282,12 +283,12 @@
       <BaseSection>
         <div data-aos="fade-right" data-aos-delay="150" class="col-span-12 lg:col-span-6">
           <div class="w-full">
-            <img :src="require('~/assets/img/faq.webp')" class="w-full" alt="" />
+            <img :src="require('~/assets/img/faq.png')" class="w-full" alt="" />
           </div>
         </div>
         <div data-aos="fade-left" data-aos-delay="150" class="col-span-12 lg:col-span-6 px-4 sm:px-6 mt-8">
           <span class="text-base text-gradient font-semibold uppercase mb-4 sm:mb-2">Support</span>
-          <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">Frequently asked questions</h2>
+          <h2 class="text-3xl sm:text-4xl font-semibold mb-10 sm:mb-6">FAQ</h2>
 
           <ul class="shadow-box">
             <BaseAccordion v-for="(accordion, index) in accordions" :key="index" :accordion="accordion" />
@@ -344,7 +345,7 @@ export default {
       trendings: [
         {
           id: 1,
-          name: 'vue',
+          name: 'VUE',
           udt: '2024-05',
           price: 43180.13,
           logo: 'vue.png',
@@ -353,7 +354,7 @@ export default {
         },
         {
           id: 2,
-          name: 'flutter',
+          name: 'FLUTTER',
           udt: '2024-01',
           price: 3480.65,
           logo: 'flutter.png',
@@ -362,7 +363,7 @@ export default {
         },
         {
           id: 3,
-          name: 'spring',
+          name: 'SPRING',
           price: 150.2,
           udt: '2024-01',
           logo: 'spring.png',
@@ -371,10 +372,19 @@ export default {
         },
         {
           id: 4,
-          name: 'java',
+          name: 'SWIFT',
           price: 0.1572,
           udt: '2024-01',
-          logo: 'java.png',
+          logo: 'swift.png',
+          increase: true,
+          data: [35, 70, 60, 80, 50, 60, 40]
+        },
+        {
+          id: 5,
+          name: 'KOTLIN',
+          price: 0.1572,
+          udt: '2024-01',
+          logo: 'kotlin.png',
           increase: true,
           data: [35, 70, 60, 80, 50, 60, 40]
         }
@@ -382,7 +392,7 @@ export default {
       topGainers: [
         {
           id: 1,
-          name: 'intellij',
+          name: 'INTELLIJ',
           price: 0.00374,
           logo: 'intellij.png',
           increase: true,
@@ -411,12 +421,20 @@ export default {
           logo: 'dbeaver.png',
           increase: true,
           data: [45, 35, 40, 30, 25, 45, 35]
+        },
+        {
+          id: 4,
+          name: 'FORK',
+          price: 0.000123,
+          logo: 'fork.png',
+          increase: true,
+          data: [45, 35, 40, 30, 25, 45, 35]
         }
       ],
       recents: [
         {
           id: 1,
-          name: 'grafana',
+          name: 'GRAFANA',
           price: 0.0608,
           logo: 'grafana.png',
           increase: false,
@@ -424,7 +442,7 @@ export default {
         },
         {
           id: 2,
-          name: 'loki',
+          name: 'LOKI',
           price: 0.5875,
           logo: 'loki.png',
           increase: false,
@@ -432,7 +450,7 @@ export default {
         },
         {
           id: 3,
-          name: 'prometheus',
+          name: ' PROMETHEUS',
           price: 0.04041,
           logo: 'prometheus.png',
           increase: true,
@@ -440,33 +458,38 @@ export default {
         },
         {
           id: 4,
-          name: 'docker',
+          name: 'GIT',
           price: 1366.24,
-          logo: 'docker.png',
+          logo: 'git.png',
+          increase: true,
+          data: [35, 30, 60, 50, 35, 45, 40]
+        },
+        {
+          id: 5,
+          name: 'SVN',
+          price: 1366.24,
+          logo: 'subversion.png',
           increase: true,
           data: [35, 30, 60, 50, 35, 45, 40]
         }
       ],
       accordions: [
         {
-          title: 'Why should I choose NEFA?',
-          description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over 8 million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features."
+          title: '프로젝트 진행?',
+          description: 'Spring , Mybatis , Javascript, Jsp로 진행하였습니다. 사용DB는 오라클 , 마리아 2가지를 사용하였고 최근 신규 프로젝트들은 백엔드는 Spring boot, 프론트는 Vue, 또는 Flutter로 진행하려고 노력하고있습니다.'
         },
         {
-          title: 'How secure is NEFA?',
+          title: '개발 경험은?',
           description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features."
+            '9년차이고 그동안 Srping 으로만 진행하였습니다. 최근에 시작한 Flutter는 6개월 정도 Vue는 2개월 정도 진행하였습니다.'
         },
         {
-          title: 'Do I have to buy a whole Bitcoin?',
-          description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features."
+          title: 'FLUTTER?',
+          description: '플러터 버전 관리는 fvm을 사용하였고 상태관리는 Hook 사용.'
         },
         {
-          title: 'How do I actually buy Bitcoin?',
-          description:
-            "We're industry pioneers, having been in the cryptocurrency industry since 2016. We've facilitated more than 21 billion USD worth of transactions on our exchange for customers in over 40 countries. Today, we're trusted by over million customers around the world and have received praise for our easy-to-use app, secure wallet, and range of features."
+          title: 'Vue?',
+          description: '최근에 Vue를 시작하면서 해당 페이지를 제작하게 되었습니다. vue 는 2024.05월부터 시작하였고. vue 프레임워크로는 nuxt를 사용하고 css는 Tailwind를 사용하고있습니다.'
         }
       ],
       steps: [
