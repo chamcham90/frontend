@@ -139,7 +139,7 @@
     <!-- Partners section -->
     <section class="bg-partner relative max-w-full sm:mx-6 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full px-6 sm:px-0 py-16 flex flex-col items-center justify-center space-y-4 text-center">
-        <h3 data-aos="flip-down" class="text-2xl text-neutral-800 font-semibold">사용가능</h3>
+        <h3 data-aos="flip-down" class="text-2xl text-neutral-800 font-semibold">사용 가능한 스킬</h3>
         <p data-aos="flip-down" class="paragraph">프로젝트에 적용해보세요</p>
         <div data-aos="fade-up" class="flex flex-wrap items-center justify-center">
           <LandingPartnerImage
@@ -183,35 +183,24 @@
       <div class="relative max-w-screen-xl px-4 sm:px-2 mx-auto grid grid-cols-12 gap-x-6">
         <LandingTradingToolImage class="sm:hidden" />
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 space-y-8 sm:space-y-6 px-4 sm:px-6 mt-8">
-          <h2 class="text-4xl font-semibold">Advanced Trading <span class="text-header-gradient">Tools</span></h2>
+          <h2 class="text-4xl font-semibold">다양한 <span class="text-header-gradient">개발도구</span> 사용</h2>
           <div class="space-y-2">
-            <h4 class="text-lg font-medium">Professional Access, Non-stop Availability</h4>
+            <h4 class="text-lg font-medium">도구의 중요성</h4>
             <p class="paragraph text-sm xl:text-base">
-              We provide premium access to crypto trading for both individuals and institutions through high liquidity,
-              reliable order execution and constant uptime.
+              개발 도구는 복잡한 문제를 해결하고, 코드를 관리하며, 프로젝트의 요구사항을 충족시키는 데 필수적입니다. 현대적인 도구들은 클라우드 서비스, 자동화된 테스트, 컨테이너화, 버전 관리 등을 지원하여 개발자가 보다 집중하여 더 창의적인 솔루션을 개발할 수 있도록 돕습니다.
             </p>
           </div>
           <div class="space-y-2">
-            <h4 class="text-lg font-medium">A Range of Powerful Apis</h4>
+            <h4 class="text-lg font-medium">도구의 다양성</h4>
             <p class="paragraph text-sm xl:text-base">
-              Set up your own trading interface or deploy your algorithmic strategy with our high-performance FIX and
-              HTTP APIs. Connect to our WebSocket for real-time data streaming.
+              다양한 개발 도구를 사용하는 것은 개발자로 하여금 여러 프로그래밍 언어와 프레임워크에 대한 이해를 넓히는 동시에, 다양한 문제에 대응할 수 있는 능력을 키울 수 있도록 합니다. 예를 들어, JetBrains의 IntelliJ IDEA는 Java 개발에 최적화된 도구이며, Microsoft의 Visual Studio는 .NET 프레임워크와 C# 개발에 강력한 지원을 제공합니다
             </p>
           </div>
           <div class="space-y-2">
-            <h4 class="text-lg font-medium">Customer Support</h4>
+            <h4 class="text-lg font-medium">향상된 제품 품질</h4>
             <p class="paragraph text-sm xl:text-base">
-              Premium 24/7 support available to all customers worldwide by phone or email. Dedicated account managers
-              for partners.
+              다양한 개발 도구를 활용하면, 버그를 조기에 발견하고 수정할 수 있는 자동화된 테스트 및 코드 검사 기능을 이용할 수 있습니다. 이는 최종 제품의 안정성과 성능을 개선하는 결과를 가져오며, 고객에게 더 높은 품질의 소프트웨어를 제공할 수 있습니다.
             </p>
-          </div>
-          <div class="flex flex-col sm:flex-row">
-            <BaseButton class="px-10 py-4 bg-inherit text-gradient border border-[#4A8FF6] text-base">
-              카카오톡
-            </BaseButton>
-            <BaseButton class="bg-inherit text-[#4A8FF6] px-10 py-4 text-center underline rounded-full">
-              Learn More
-            </BaseButton>
           </div>
         </div>
         <LandingTradingToolImage data-aos="fade-left" class="hidden sm:block" />
@@ -223,29 +212,26 @@
       <div class="relative max-w-screen-xl px-8 mx-auto grid grid-cols-12 gap-x-6">
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6">
           <div class="w-full">
-            <img :src="require('~/assets/img/industry-leading-security.webp')" class="w-full" alt="" />
+            <img :src="require('~/assets/img/industry-leading-security.png')" class="w-full" alt="" />
           </div>
         </div>
         <div data-aos="fade-left" class="col-span-12 lg:col-span-5 space-y-8 sm:space-y-6 mt-8 xl:px-8">
-          <h2 class="text-4xl font-semibold">Industry-leading security from day one</h2>
+          <h2 class="text-4xl font-semibold">개인 <span class="text-header-gradient">보안</span> 중요성</h2>
           <ul class="space-y-8 sm:space-y-4">
-            <LandingListItem title="Safety, security and compliance">
+            <LandingListItem title="내부보안관리">
               <p class="text-sm text-gray-700 leading-relaxed">
-                NEFA is a licensed New York trust company that undergoes regular bank exams and is subject to the
-                cybersecurity audits conducted by the New York Department of Financial Services.
-                <span class="underline">Learn more</span> about our commitment to security.
+                기술 및 코드 유출의 상당 부분은 내부자에 의해 발생할 수 있습니다. 이를 방지하기 위해 정기적인 보안 교육을 실시하고, 직원의 보안 의식을 강화하는 것이 중요합니다. 또한, 행동 분석을 통해 비정상적인 활동을 감지하고 즉시 대응할 수 있는 시스템을 구축해야 합니다.
+<!--                <span class="underline">Learn more</span> about our commitment to security.-->
               </p>
             </LandingListItem>
-            <LandingListItem title="Hardware security keys">
+            <LandingListItem title="계약과 법적 보호">
               <p class="text-sm text-gray-700 leading-relaxed">
-                With NEFA you can secure your account with a hardware security key via WebAuthn.
+                모든 개발자와 협력 업체는 기술 유출을 방지하기 위한 법적 계약(비밀 유지 계약, NDA)에 서명해야 합니다. 이러한 계약은 지적 재산의 중요성을 강조하고, 유출 시의 법적 책임을 명확히 합니다.
               </p>
             </LandingListItem>
-            <LandingListItem title="SOC Certifications">
+            <LandingListItem title="문서와 코드의 접근 권한 관리">
               <p class="text-sm text-gray-700 leading-relaxed">
-                NEFA is <span class="underline">SOC 1 Type 2</span> and
-                <span class="underline">SOC 2 Type 2</span> compliant. We are the world’s first cryptocurrency exchange
-                and custodian to complete these exams.
+                자신이 관리하는 문서나 코드에 대해 불필요한 접근 권한을 제한해야 합니다. 접근 권한은 업무상 필요한 최소한의 범위에 국한되어야 하며, 권한 변경이 필요한 경우 즉시 조정해야 합니다.
               </p>
             </LandingListItem>
           </ul>
@@ -257,7 +243,7 @@
     <section class="bg-trading-tools relative max-w-full sm:mx-4 xl:mx-10 my-24 shadow sm:rounded-2xl overflow-hidden">
       <div class="w-full py-16 flex flex-col items-center">
         <h2 data-aos="flip-down" class="text-3xl sm:text-4xl font-semibold text-center">
-          Get started in just a few minutes
+          함께 일하는 방법
         </h2>
         <div
           data-aos="fade-up"
@@ -305,7 +291,7 @@
         href="#navbar"
         class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
       >
-        <span>Back to top</span>
+        <span>맨 위로</span>
         <ArrowUpIcon :size="20" />
       </a>
     </div>
@@ -495,21 +481,21 @@ export default {
       steps: [
         {
           img: 'sign-up.png',
-          title: 'Sign Up',
+          title: '연락',
           description:
-            'Sign up for your free NEFA Wallet on web, iOS or Android and follow our easy process to set up your profile'
+            '연락처를 남겨 주시면 이메일 또는 전화를 통해 일정을 조율합니다.'
         },
         {
           img: 'fund.png',
-          title: 'Fund',
+          title: '협의',
           description:
-            'Choose your preferred payment method such as bank transfer or credit card to top up your NEFA Wallet'
+            '상세한 논의를 통해 서로의 요구사항과 기대를 명확히 하고, 실행 가능한 계획을 수립합니다.'
         },
         {
           img: 'buy-crypto.png',
-          title: 'Buy Crypto',
+          title: '협업',
           description:
-            'Buy Bitcoin or Ethereum, then securely store it in your Wallet or send it on easily to your friends anywhere'
+            '약속된 계획에 따라 각자의 역할을 충실히 수행하며, 공동의 목표를 향해 함께 노력합니다'
         }
       ]
     }
