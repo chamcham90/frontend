@@ -43,10 +43,13 @@
             <input
               type="text"
               class="w-full px-2 py-4 sm:py-3 rounded-lg sm:rounded-md text-sm focus:outline-none border border-[#AAAAAA] placeholder-[#888]"
+              name="contactEmail"
+              v-model="contactEmail"
               placeholder="이메일 입력"
             />
             <button
               class="w-full bg-blue-gradient px-4 py-4 sm:py-3 rounded-md text-white hover:shadow-md transition duration-300"
+              v-on:click="saveContactEmailSubmit"
             >
               전송
             </button>
@@ -64,6 +67,38 @@
 </template>
 <script>
 export default {
-  name: 'BaseFooter'
+  methods: {
+    async saveContactEmailSubmit () {
+      try {
+        // FormData 객체 생성
+        const formData = new FormData()
+        formData.append('contactEmail', this.contactEmail)
+        // Axios를 사용한 POST 요청
+        const response = await this.$axios.post('/two/email', formData, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+
+        if (response.status === 200) {
+          if (response.data.msg) {
+            alert(response.data.msg)
+          }
+          this.$router.push('/')
+        } else {
+          alert(response.data.errorMessage) // response 객체에서 오류 메시지 접근 방식 확인 필요
+        }
+      } catch (error) {
+        console.error('Login error:', error)
+        alert('저장중 오류가 발생하였습니다.')
+      }
+    }
+  },
+  name: 'BaseFooter',
+  data () {
+    return {
+      contactEmail: ''
+    }
+  }
 }
 </script>

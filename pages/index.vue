@@ -23,11 +23,13 @@
           >
             <BaseButton
               class="max-w-full px-8 py-4 bg-gradient-to-r from-[#468ef9] to-[#0c66ee] border border-[#0c66ee] text-white"
+              v-on:click="goToKakaoLink"
             >
               카카오톡연결
             </BaseButton>
             <BaseButton
               class="max-w-full px-6 py-4 bg-inherit text-gradient border border-[#0c66ee] flex items-center justify-center"
+              v-on:click="goPlayStore"
             >
               <span>플레이 스토어 연결</span>
               <ChevronDownIcon :size="20" class="mt-1 text-[#0c66ee]" />
@@ -113,23 +115,49 @@
             연락처를 남겨주시면 24시간 이내로 연락드리겠습니다!
           </p>
           <div class="space-y-6 lg:pr-12">
-            <LandingExchange
-              title="이름"
-              name="amount"
-              type="text"
-              default-value=""
-              :exchange-selected="currencySelected"
-              :exchanges="currencies"
-            />
-            <LandingExchange
-              title="연락처"
-              name="get"
-              type="number"
-              default-value=""
-              :exchange-selected="cryptoSelected"
-              :exchanges="cryptocurrencies"
-            />
-            <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium">연락처 남기기</BaseButton>
+            <div class="flex items-center space-x-4">
+              <div class="lg:max-w-[1600px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
+                <span class="lg:max-w-[80px] w-full text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> 이름 </span>
+                <input
+                  type="text"
+                  class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
+                  name="contactName"
+                  v-model="contactName"
+                  value=""
+                />
+              </div>
+            </div>
+            <div class="flex items-center space-x-4">
+              <div class="lg:max-w-[1600px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
+                <span class="lg:max-w-[80px] w-full text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> 연락처 </span>
+                <input
+                  type="type"
+                  class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
+                  name="contactNumber"
+                  v-model="contactNumber"
+                  value=""
+                />
+              </div>
+            </div>
+<!--            <LandingExchange-->
+<!--              title="이름"-->
+<!--              name="contactName"-->
+<!--              type="text"-->
+<!--              default-value=""-->
+<!--              :exchange-selected="currencySelected"-->
+<!--              :exchanges="currencies"-->
+<!--            />-->
+<!--            <LandingExchange-->
+<!--              title="연락처"-->
+<!--              name="contactNumber"-->
+<!--              type="number"-->
+<!--              default-value=""-->
+<!--              :exchange-selected="cryptoSelected"-->
+<!--              :exchanges="cryptocurrencies"-->
+<!--            />-->
+            <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium"
+                        v-on:click="saveContactNumberSubmit"
+            >연락처 남기기</BaseButton>
           </div>
         </div>
         <LandingBuyTradeImage data-aos="fade-left" class="hidden sm:block" />
@@ -301,10 +329,47 @@
 <script>
 import aosMixin from '@/mixins/aos'
 export default {
+  methods: {
+    goToKakaoLink () {
+      window.location = 'https://open.kakao.com/o/svJzkzqg'
+    },
+    goPlayStore () {
+      window.location = 'https://play.google.com/store/apps/developer?id=%EC%B0%B8%EC%B0%B8'
+    },
+    async saveContactNumberSubmit () {
+      try {
+        // FormData 객체 생성
+        const formData = new FormData()
+        formData.append('contactName', this.contactName)
+        formData.append('contactNumber', this.contactNumber)
+
+        // Axios를 사용한 POST 요청
+        const response = await this.$axios.post('/two/number', formData, {
+          headers: {
+            'Content-Type': 'application/json'
+          }
+        })
+
+        if (response.status === 200) {
+          if (response.data.msg) {
+            alert(response.data.msg)
+          }
+          this.$router.push('/')
+        } else {
+          alert(response.data.errorMessage) // response 객체에서 오류 메시지 접근 방식 확인 필요
+        }
+      } catch (error) {
+        console.error('Login error:', error)
+        alert('저장중 오류가 발생하였습니다.')
+      }
+    }
+  },
   name: 'IndexPage',
   mixins: [aosMixin],
   data () {
     return {
+      contactName: '',
+      contactNumber: '',
       selected: 0,
       dropdownConcurency: false,
       dropdownCrypto: false,
