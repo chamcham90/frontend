@@ -17,7 +17,7 @@
             <thead>
               <tr>
                 <th class="text-left text-sm font-medium text-gray-500">Name</th>
-                <th class="text-left text-sm font-medium text-gray-500">Days</th>
+                <th class="text-left text-sm font-medium text-gray-500"></th>
 <!--                <th class="hidden sm:block text-left text-sm font-medium text-gray-500">Chart</th>-->
               </tr>
             </thead>
@@ -33,7 +33,7 @@
                   <div class="flex items-center">
                     <PlusThickIcon v-if="data.increase" :size="14" class="text-emerald-500" />
                     <MinusThickIcon v-else :size="14" class="text-red-500" />
-                    <span>{{ data?.udt }}</span>
+                    <!--<span>{{ data?.udt }}</span>-->
                   </div>
                 </td>
 <!--                <td class="hidden sm:block whitespace-nowrap">-->
