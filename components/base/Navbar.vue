@@ -14,20 +14,21 @@
         <ul :class="[open ? 'flex' : 'hidden lg:flex']"
             class="w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0"
             >
-<!--            <NavLink name="차명도" url="#" />-->
-<!--            <NavLink name="시발" url="#" />-->
-<!--            <NavLink name="섹스" url="#" />-->
-<!--            <NavLink name="예아" url="#" />-->
-<!--            <NavLink name="윤성우" url="#" />-->
-<!--            <button-->
-<!--              class="w-full md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline flex items-center"-->
-<!--              @click="dropdownToggler"-->
-<!--              @blur="dropdownToggler"-->
-<!--            >-->
-<!--              <span>더보기</span>-->
-<!--              <ChevronUpIcon v-if="dropdownNavbar" :size="16" />-->
-<!--              <ChevronDownIcon v-else :size="16" />-->
-<!--            </button>-->
+            <!-- 뭐냐          -->
+            <NavLink name="소개" url="/" />
+            <NavLink name="프로젝트" url="/" />
+            <NavLink name="1234" url="#" />
+            <NavLink name="1234" url="#" />
+            <NavLink name="1234" url="#" />
+            <button
+              class="w-full md:px-4 py-2 text-sm bg-transparent rounded-lg text-[#666666] hover:text-gray-900 focus:outline-none focus:shadow-outline flex items-center"
+              @click="dropdownToggler"
+              @blur="dropdownToggler"
+            >
+              <span>더보기</span>
+              <ChevronUpIcon v-if="dropdownNavbar" :size="16" />
+              <ChevronDownIcon v-else :size="16" />
+            </button>
             <transition name="transform-fade-down">
               <ul
                 v-if="dropdownNavbar"

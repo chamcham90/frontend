@@ -139,22 +139,6 @@
                 />
               </div>
             </div>
-<!--            <LandingExchange-->
-<!--              title="이름"-->
-<!--              name="contactName"-->
-<!--              type="text"-->
-<!--              default-value=""-->
-<!--              :exchange-selected="currencySelected"-->
-<!--              :exchanges="currencies"-->
-<!--            />-->
-<!--            <LandingExchange-->
-<!--              title="연락처"-->
-<!--              name="contactNumber"-->
-<!--              type="number"-->
-<!--              default-value=""-->
-<!--              :exchange-selected="cryptoSelected"-->
-<!--              :exchanges="cryptocurrencies"-->
-<!--            />-->
             <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium"
                         v-on:click="saveContactNumberSubmit"
             >연락처 남기기</BaseButton>
@@ -526,20 +510,20 @@ export default {
       ],
       accordions: [
         {
-          title: '프로젝트 진행?',
-          description: 'Spring , Mybatis , Javascript, Jsp로 진행하였습니다. 사용DB는 오라클 , 마리아 2가지를 사용하였고 최근 신규 프로젝트들은 백엔드는 Spring boot, 프론트는 Vue, 또는 Flutter로 진행하려고 노력하고있습니다.'
+          title: '프로젝트 진행',
+          description: 'Spring , Mybatis , Javascript, Jsp 주로 개발하였고 CI/CD 개발 환경은 없었습니다.'
         },
         {
-          title: '개발 경험은?',
+          title: '개발 경험',
           description:
-            '9년차이고 그동안 Srping 으로만 진행하였습니다. 최근에 시작한 Flutter는 6개월 정도 Vue는 2개월 정도 진행하였습니다.'
+            '9년동안 spring, jsp로만 진행하다 최근에 시작한 프로젝트는 Flutter는 6개월 정도 Vue는 2개월 정도 진행하였습니다.'
         },
         {
-          title: 'FLUTTER?',
-          description: '플러터 버전 관리는 fvm을 사용하였고 상태관리는 Hook 사용.'
+          title: 'FLUTTER',
+          description: '플러터는 작년 2023년 12월 부터 시작하였고 상태관리는 Hook 으로 진행하였고 진행한 프로젝트는 1건입니다.'
         },
         {
-          title: 'Vue?',
+          title: 'Vue',
           description: '최근에 Vue를 시작하면서 해당 페이지를 제작하게 되었습니다. vue 는 2024.05월부터 시작하였고. vue 프레임워크로는 nuxt를 사용하고 css는 Tailwind를 사용하고있습니다.'
         }
       ],

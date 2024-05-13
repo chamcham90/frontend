@@ -36,11 +36,6 @@
                     <!--<span>{{ data?.udt }}</span>-->
                   </div>
                 </td>
-<!--                <td class="hidden sm:block whitespace-nowrap">-->
-<!--                  <div>-->
-<!--                    <LineChart class="w-28 h-12 -mx-2" :datasets="data.data" :increase="data.increase" />-->
-<!--                  </div>-->
-<!--                </td>-->
               </tr>
             </tbody>
           </table>
