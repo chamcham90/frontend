@@ -4,7 +4,7 @@
       <div class="w-full flex flex-col lg:flex-row items-center space-x-4 xl:space-x-8">
         <div class="flex flex-row items-center justify-between py-6">
           <div>
-            <img :src="require('~/assets/img/logo/nefa.svg')" class="w-24 xl:w-28" alt="Nefa Logo" />
+            <img :src="require('~/assets/img/logo/nefa.svg')" class="w-24 xl:w-28" @click="navigateToHome"/>
           </div>
           <button class="rounded-lg lg:hidden focus:outline-none focus:shadow-outline" @click="open = !open">
             <SegmentIcon v-if="!open" :size="24" />
@@ -15,8 +15,8 @@
             class="w-full h-auto flex flex-col flex-grow lg:items-center pb-4 lg:pb-0 lg:justify-end lg:flex-row origin-top duration-300 xl:space-x-2 space-y-3 lg:space-y-0"
             >
             <!-- 뭐냐          -->
-            <NavLink name="소개" url="/" />
-            <NavLink name="프로젝트" url="/" />
+            <NavLink name="소개" url="/profile/info" />
+            <NavLink name="프로젝트" url="/profile/project" />
             <NavLink name="1234" url="#" />
             <NavLink name="1234" url="#" />
             <NavLink name="1234" url="#" />
@@ -73,6 +73,9 @@ export default {
   methods: {
     dropdownToggler () {
       this.dropdownNavbar = !this.dropdownNavbar
+    },
+    navigateToHome () {
+      window.location.href = '/'
     }
   }
 }
