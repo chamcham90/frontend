@@ -108,40 +108,31 @@
         <LandingBuyTradeImage class="sm:hidden mb-8" />
         <div data-aos="fade-right" class="col-span-12 lg:col-span-6 mt-4 xl:mt-20 space-y-6 px-4">
           <h2 class="text-4xl font-semibold sm:pr-8 xl:pr-12">
-            연락처를 남겨주시면 <br class="hidden sm:block" />
-            곧 연락드리겠습니다!
+            연락처<br class="hidden sm:block" />
           </h2>
           <p class="paragraph">
-            연락처를 남겨주시면 24시간 이내로 연락드리겠습니다!
+            2가지 방법으로 연결 가능합니다.
           </p>
           <div class="space-y-6 lg:pr-12">
             <div class="flex items-center space-x-4">
               <div class="lg:max-w-[1600px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
-                <span class="lg:max-w-[80px] w-full text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> 이름 </span>
+                <span class="lg:max-w-[80px] w-full text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> 이메일 </span>
                 <input
                   type="text"
                   class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
                   name="contactName"
-                  v-model="contactName"
-                  value=""
+                  value="support_you@naver.com"
                 />
-              </div>
-            </div>
-            <div class="flex items-center space-x-4">
-              <div class="lg:max-w-[1600px] w-full flex items-center relative px-5 py-3 border border-[#0c66ee] rounded-xl">
-                <span class="lg:max-w-[80px] w-full text-sm font-medium pr-5 py-3 text-[#0c66ee] border-r border-[#0c66ee]"> 연락처 </span>
-                <input
-                  type="type"
-                  class="w-full text-lg font-medium text-right border-none ring-0 focus:outline-none focus:ring-0"
-                  name="contactNumber"
-                  v-model="contactNumber"
-                  value=""
-                />
+                <button @click="copyToClipboard('support_you@naver.com')" class="ml-4 text-blue-500 hover:text-blue-700">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16h.01M12 20h.01M16 16h.01M8 12h.01M12 8h.01M16 12h.01M12 4v.01M4 4v16h16V4H4z" />
+                  </svg>
+                </button>
               </div>
             </div>
             <BaseButton class="w-full px-5 py-4 bg-blue-gradient text-white text-base font-medium"
-                        v-on:click="saveContactNumberSubmit"
-            >연락처 남기기</BaseButton>
+                        v-on:click="goToKakaoLink"
+            >카카오톡연결</BaseButton>
           </div>
         </div>
         <LandingBuyTradeImage data-aos="fade-left" class="hidden sm:block" />
@@ -346,6 +337,13 @@ export default {
         console.error('Login error:', error)
         alert('저장중 오류가 발생하였습니다.')
       }
+    },
+    copyToClipboard (text) {
+      navigator.clipboard.writeText(text).then(() => {
+        alert('이메일 주소가 클립보드에 복사되었습니다.')
+      }).catch((err) => {
+        console.error('클립보드 복사 실패:', err)
+      })
     }
   },
   name: 'IndexPage',

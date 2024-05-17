@@ -22,6 +22,9 @@
       <InfoContainer
         :profile-info="profileInfo7"
       ></InfoContainer>
+      <InfoContainer
+        :profile-info="profileInfo8"
+      ></InfoContainer>
     </div>
   </div>
 </template>
@@ -95,6 +98,15 @@ export default {
         subTitleTxt: '육군',
         bodyTxt: '통신 병장 만기전역.',
         footerTxt: '어쩌구저쩌꾸',
+        footerHref: 'https://naver.com'
+      },
+      profileInfo8: {
+        bannerImgSrc: require('~/assets/img/profile/smoke-banner.png'),
+        circleImgSrc: require('~/assets/img/profile/smoke.png'),
+        titleTxt: '비흡연',
+        subTitleTxt: '금연',
+        bodyTxt: '비흡연자이고 주량은 소주 반병정도입니다.',
+        footerTxt: '1달에 1~2번정도',
         footerHref: 'https://naver.com'
       }
     }

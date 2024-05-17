@@ -1,47 +1,47 @@
 <template>
   <div>
     <ProjectContainer
-      :project-info="projectInfo"
+      :profile-project="projectInfo"
       :project-skills="skills"
       :project-tools="tools"
       />
     <ProjectContainer
-      :project-info="projectInfo2"
+      :profile-project="projectInfo2"
       :project-skills="skills2"
       :project-tools="tools2"
     />
     <ProjectContainer
-      :project-info="projectInfo3"
+      :profile-project="projectInfo3"
       :project-skills="skills3"
       :project-tools="tools3"
     />
     <ProjectContainer
-      :project-info="projectInfo4"
+      :profile-project="projectInfo4"
       :project-skills="skills4"
       :project-tools="tools4"
     />
     <ProjectContainer
-      :project-info="projectInfo5"
+      :profile-project="projectInfo5"
       :project-skills="skills5"
       :project-tools="tools5"
     />
     <ProjectContainer
-      :project-info="projectInfo6"
+      :profile-project="projectInfo6"
       :project-skills="skills6"
       :project-tools="tools6"
     />
     <ProjectContainer
-      :project-info="projectInfo7"
+      :profile-project="projectInfo7"
       :project-skills="skills7"
       :project-tools="tools7"
     />
     <ProjectContainer
-      :project-info="projectInfo8"
+      :profile-project="projectInfo8"
       :project-skills="skills8"
       :project-tools="tools8"
     />
     <ProjectContainer
-      :project-info="projectInfo9"
+      :profile-project="projectInfo9"
       :project-skills="skills9"
       :project-tools="tools9"
     />
