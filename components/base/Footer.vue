@@ -20,7 +20,7 @@
         >
           <ul class="space-y-4">
             <NavLink name="카카오톡" url='https://open.kakao.com/o/svJzkzqg' />
-            <NavLink name="라인" url="" />
+<!--            <NavLink name="라인" url="" />-->
           </ul>
         </div>
         <div

@@ -42,7 +42,7 @@ export default {
         circleImgSrc: 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8JUVCJUIwJUIxJUVCJUE3JTg4fGVufDB8fDB8fHww',
         titleTxt: '1990',
         subTitleTxt: '35세',
-        bodyTxt: '뭐 벌써 30대냐',
+        bodyTxt: '30대 중반',
         footerTxt: 'support_you@naver.com',
         footerHref: 'https://naver.com'
       },
@@ -51,8 +51,8 @@ export default {
         circleImgSrc: require('~/assets/img/profile/istp-person.png'),
         titleTxt: 'ISTP',
         subTitleTxt: '만능재주꾼',
-        bodyTxt: '처음 테스트했을때와 계속 동일',
-        footerTxt: '010-1234-1234',
+        bodyTxt: '변경 이력 없음',
+        footerTxt: '',
         footerHref: 'https://naver.com'
       },
       profileInfo3: {
@@ -61,7 +61,7 @@ export default {
         titleTxt: '대구',
         subTitleTxt: '대구 거주중',
         bodyTxt: '25년째 대구 거주중',
-        footerTxt: '대구삼',
+        footerTxt: '대구',
         footerHref: 'https://naver.com'
       },
       profileInfo4: {
@@ -69,8 +69,8 @@ export default {
         circleImgSrc: require('~/assets/img/profile/dev.png'),
         titleTxt: '개발자',
         subTitleTxt: '웹개발자',
-        bodyTxt: '이것저것함',
-        footerTxt: '기술스택은모르겟음',
+        bodyTxt: '공공SI 7년 , 인쇄업체 3년',
+        footerTxt: '',
         footerHref: 'https://naver.com'
       },
       profileInfo5: {
@@ -78,8 +78,8 @@ export default {
         circleImgSrc: require('~/assets/img/profile/swim.png'),
         titleTxt: '수영',
         subTitleTxt: '접영은 못합니다',
-        bodyTxt: '수영2년차',
-        footerTxt: '어쩌구저쩌꾸',
+        bodyTxt: '수영3년차',
+        footerTxt: '',
         footerHref: 'https://naver.com'
       },
       profileInfo6: {
@@ -88,16 +88,16 @@ export default {
         titleTxt: '집돌이',
         subTitleTxt: '집에만있습니다.',
         bodyTxt: '주로 집에만있습니다.',
-        footerTxt: '어쩌구저쩌꾸',
+        footerTxt: '게임 및 공부',
         footerHref: 'https://naver.com'
       },
       profileInfo7: {
         bannerImgSrc: require('~/assets/img/profile/army-banner.png'),
         circleImgSrc: require('~/assets/img/profile/army.png'),
-        titleTxt: '군필',
+        titleTxt: '군대',
         subTitleTxt: '육군',
-        bodyTxt: '통신 병장 만기전역.',
-        footerTxt: '어쩌구저쩌꾸',
+        bodyTxt: '통신 병장만기전역 근무지 고양시 1군단',
+        footerTxt: '',
         footerHref: 'https://naver.com'
       },
       profileInfo8: {
@@ -105,8 +105,8 @@ export default {
         circleImgSrc: require('~/assets/img/profile/smoke.png'),
         titleTxt: '비흡연',
         subTitleTxt: '금연',
-        bodyTxt: '비흡연자이고 주량은 소주 반병정도입니다.',
-        footerTxt: '1달에 1~2번정도',
+        bodyTxt: '비흡연자이고 술은 못마십니다.',
+        footerTxt: '',
         footerHref: 'https://naver.com'
       }
     }

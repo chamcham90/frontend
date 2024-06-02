@@ -294,7 +294,7 @@
         href="#navbar"
         class="px-6 py-3 flex items-center space-x-2 bg-[#FAFAFA] hover:bg-gray-100 hover:shadow-md border border-[#DDDDDD] rounded-md text-gray-700"
       >
-        <span>맨 위로</span>
+<!--        <span>맨 위로</span>-->
         <ArrowUpIcon :size="20" />
       </a>
     </div>
@@ -509,12 +509,12 @@ export default {
       accordions: [
         {
           title: '프로젝트 진행',
-          description: 'Spring , Mybatis , Javascript, Jsp 주로 개발하였고 CI/CD 개발 환경은 없었습니다.'
+          description: 'Spring , Mybatis , jQuery, Jsp를 주로 개발진행하였습니다.'
         },
         {
-          title: '개발 경험',
+          title: '개발 스타일',
           description:
-            '9년동안 spring, jsp로만 진행하다 최근에 시작한 프로젝트는 Flutter는 6개월 정도 Vue는 2개월 정도 진행하였습니다.'
+            '새로운것에 대한 거부감은 없으며 잼있어 보이는 개발이 있으면 진행해보는 스타일입니다.'
         },
         {
           title: 'FLUTTER',

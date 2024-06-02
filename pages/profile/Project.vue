@@ -45,6 +45,11 @@
       :project-skills="skills9"
       :project-tools="tools9"
     />
+    <ProjectContainer
+      :profile-project="projectInfo10"
+      :project-skills="skills10"
+      :project-tools="tools10"
+    />
   </div>
 </template>
 <script>
@@ -434,6 +439,65 @@ export default {
         }
       ],
       tools9: [
+        {
+          name: 'Intellij',
+          logo: 'intellij.png'
+        },
+        {
+          name: 'DBEAVER',
+          logo: 'dbeaver.png'
+        },
+        {
+          name: 'GIT',
+          logo: 'git.png'
+        },
+        {
+          name: 'FIGMA',
+          logo: 'figma.png'
+        },
+        {
+          name: 'LOKI',
+          logo: 'loki.png'
+        },
+        {
+          name: 'AWS EC2',
+          logo: 'ec2.png'
+        }
+      ],
+      projectInfo10: {
+        name: '인쇄물 정보사이트',
+        date: '2022-05-15 ~ 현재',
+        duty: '인쇄물 정보 수집',
+        front: 'Vue, Nuxt',
+        back: 'Spring Boot, MariaDB, PM2'
+      },
+      skills10: [
+        {
+          name: 'Vue',
+          logo: 'vue.png'
+        },
+        {
+          name: 'Spring Boot',
+          logo: 'spring.png'
+        },
+        {
+          name: 'Maria',
+          logo: 'maria.png'
+        },
+        {
+          name: 'PM2',
+          logo: 'pm2.png'
+        },
+        {
+          name: 'GRAFANA',
+          logo: 'grafana.png'
+        },
+        {
+          name: 'PROMETHEUS',
+          logo: 'prometheus.png'
+        }
+      ],
+      tools10: [
         {
           name: 'Intellij',
           logo: 'intellij.png'

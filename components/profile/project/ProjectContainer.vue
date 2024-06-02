@@ -3,7 +3,7 @@
     class="max-w-screen-xl mt-6 mx-2 sm:mx-auto px-4 sm:px-6 lg:px-0 py-6 pb-20 sm:py-8 rounded-[2.25rem] sm:rounded-xl bg-white shadow-lg sm:shadow-md transform lg:-translate-y-12"
   >
     <div class="w-full flex flex-col lg:flex-row items-start justify-center">
-      <div class="w-full lg:w-1/2 m-6 lg:mt-0 overflow-hidden space-y-6" v-bind="$attrs">
+      <div class="w-full lg:w-1/2 lg:mt-0 overflow-hidden p-3" v-bind="$attrs">
         <div class="w-full flex items-center justify-between">
           <span class="font-medium">프로젝트정보</span>
         </div>
@@ -30,9 +30,9 @@
           ></ProjectTextBox>
         </div>
       </div>
-      <div class="w-full lg:w-1/4 mt-6 lg:mt-0 overflow-hidden space-y-6" v-bind="$attrs">
+      <div class="w-full lg:w-1/4 lg:mt-0 overflow-hidden p-3" v-bind="$attrs">
         <div class="w-full flex items-center justify-between">
-          <span class="font-medium">F</span>
+          <span class="font-medium">개발</span>
         </div>
         <div class="flex flex-col">
           <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -65,9 +65,9 @@
           </div>
         </div>
       </div>
-      <div class="w-full lg:w-1/4 mt-6 lg:mt-0 overflow-hidden space-y-6" v-bind="$attrs">
+      <div class="w-full lg:w-1/4 lg:mt-0 overflow-hidden p-3" v-bind="$attrs">
         <div class="w-full flex items-center justify-between">
-          <span class="font-medium">T</span>
+          <span class="font-medium">도구</span>
         </div>
         <div class="flex flex-col">
           <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
